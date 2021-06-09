@@ -64,7 +64,7 @@ notifications:
   
   # TELEGRAM
   notify_telegram: true
-  telegram_token: 1862322699:AAHs9U7SNtf6lSTp4biwf1x1dub2TIYWrIc
+  telegram_token: 1862322699:AAGrytXDSOB8cSjqqGZas4IxFj9FH3cZuqs
 
   # TWILIO
   notify_twilio: false
