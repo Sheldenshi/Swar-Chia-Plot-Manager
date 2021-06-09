@@ -67,7 +67,7 @@ notifications:
   
   # TELEGRAM
   notify_telegram: true
-  telegram_token: 1862322699:AAHs9U7SNtf6lSTp4biwf1x1dub2TIYWrIc
+  telegram_token: 1862322699:AAGrytXDSOB8cSjqqGZas4IxFj9FH3cZuqs
 
   # TWILIO
   notify_twilio: false
@@ -179,7 +179,7 @@ jobs:
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
   - name: PP004-E
     max_plots: 999
-    farmer_public_key: 8c7f384d93384377562e8ac6acbde566c84d22fe0928ecf11fefc577cc125acfb84ab01f33c43635fd2d39fffb3deaf5
+    farmer_public_key:
     pool_public_key:
     #E:\chia01
     temporary_directory: /media/bruce/E/chia01
@@ -207,7 +207,7 @@ jobs:
 
   - name: PP004-F
     max_plots: 999
-    farmer_public_key: 8c7f384d93384377562e8ac6acbde566c84d22fe0928ecf11fefc577cc125acfb84ab01f33c43635fd2d39fffb3deaf5
+    farmer_public_key:
     pool_public_key:
     temporary_directory: /media/bruce/F/chia01
     temporary2_directory:
