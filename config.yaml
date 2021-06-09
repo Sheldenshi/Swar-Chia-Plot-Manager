@@ -4,7 +4,10 @@
 #   LINUX EXAMPLE: /usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia
 #  LINUX2 EXAMPLE: /home/swar/chia-blockchain/venv/bin/chia
 #  MAC OS EXAMPLE: /Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia
-chia_location: C:\Users\PP005\AppData\Local\chia-blockchain\app-1.1.6\resources\app.asar.unpacked\daemon\chia.exe
+
+
+#C:\Users\PP005\AppData\Local\chia-blockchain\app-1.1.6\resources\app.asar.unpacked\daemon\chia.exe
+chia_location: /home/bruce/Chia/chia-blockchain/venv/bin/chia
 
 
 manager:
@@ -19,7 +22,7 @@ manager:
 
 log:
   # folder_path: This is the folder where your log files for plots will be saved.
-  folder_path: C:\Logs\Plotter
+  folder_path: /home/bruce/Chia\Logs\Plotter
 
 
 view:
@@ -174,13 +177,15 @@ jobs:
   #        cpu_affinity: List of cpu (or threads) to allocate for plot processes. The default example assumes you have
   #                      a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
-  - name: PP005-E
+  - name: PP004-E
     max_plots: 999
-    farmer_public_key: ad80249fa81bbc0762d0b11f168000b35a3c9ffe477655630a0022dd48143efbc8b99f16270a608699d86e0fe56d92dd
+    farmer_public_key: 8c7f384d93384377562e8ac6acbde566c84d22fe0928ecf11fefc577cc125acfb84ab01f33c43635fd2d39fffb3deaf5
     pool_public_key:
-    temporary_directory: E:\chia01
+    #E:\chia01
+    temporary_directory: /media/bruce/E/chia01
     temporary2_directory:
-    destination_directory: P:\final01
+    #P:\final01
+    destination_directory: /media/bruce/M/final01
     size: 32
     bitfield: true
     threads: 4
@@ -200,13 +205,13 @@ jobs:
     enable_cpu_affinity: false
     cpu_affinity: [ 0, 1, 2, 3, 4, 5 ]
 
-  - name: PP005-F
+  - name: PP004-F
     max_plots: 999
-    farmer_public_key: ad80249fa81bbc0762d0b11f168000b35a3c9ffe477655630a0022dd48143efbc8b99f16270a608699d86e0fe56d92dd
+    farmer_public_key: 8c7f384d93384377562e8ac6acbde566c84d22fe0928ecf11fefc577cc125acfb84ab01f33c43635fd2d39fffb3deaf5
     pool_public_key:
-    temporary_directory: F:\chia01
+    temporary_directory: /media/bruce/F/chia01
     temporary2_directory:
-    destination_directory: Q:\final01
+    destination_directory: /media/bruce/N/final01
     size: 32
     bitfield: true
     threads: 4
