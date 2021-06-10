@@ -177,15 +177,15 @@ jobs:
   #        cpu_affinity: List of cpu (or threads) to allocate for plot processes. The default example assumes you have
   #                      a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
-  - name: PP004-E
+  - name: XXX-1
     max_plots: 999
     farmer_public_key:
     pool_public_key:
-    #E:\chia01
-    temporary_directory: /media/bruce/E/chia01
+    temporary_directory: /media/bruce/T1/chia01
     temporary2_directory:
     #P:\final01
-    destination_directory: /media/bruce/M/final01
+    destination_directory: 
+      - /media/bruce/D1/final01
     size: 32
     bitfield: true
     threads: 4
@@ -201,17 +201,15 @@ jobs:
     temporary2_destination_sync: false
     exclude_final_directory: false
     skip_full_destinations: true
-    windows_process_priority: 32
-    enable_cpu_affinity: false
-    cpu_affinity: [ 0, 1, 2, 3, 4, 5 ]
 
-  - name: PP004-F
+  - name: XXX-2
     max_plots: 999
     farmer_public_key:
     pool_public_key:
-    temporary_directory: /media/bruce/F/chia01
+    temporary_directory: /media/bruce/T2/chia01
     temporary2_directory:
-    destination_directory: /media/bruce/N/final01
+    destination_directory: 
+      - /media/bruce/D2/final01
     size: 32
     bitfield: true
     threads: 4
@@ -229,5 +227,29 @@ jobs:
     skip_full_destinations: true
     unix_process_priority: 10
     windows_process_priority: 32
-    enable_cpu_affinity: false
-    cpu_affinity: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ]
+  
+  - name: XXX-3
+    max_plots: 999
+    farmer_public_key:
+    pool_public_key:
+    temporary_directory: /media/bruce/T3/chia01
+    temporary2_directory:
+    destination_directory: 
+      - /media/bruce/D3/final01
+    size: 32
+    bitfield: true
+    threads: 4
+    buckets: 128
+    memory_buffer: 4500
+    max_concurrent: 8
+    max_concurrent_with_start_early: 8
+    initial_delay_minutes: 0
+    stagger_minutes: 26
+    max_for_phase_1: 4
+    concurrency_start_early_phase: 4
+    concurrency_start_early_phase_delay: 8
+    temporary2_destination_sync: false
+    exclude_final_directory: false
+    skip_full_destinations: true
+    unix_process_priority: 10
+    windows_process_priority: 32
