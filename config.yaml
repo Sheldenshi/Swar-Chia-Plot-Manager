@@ -4,7 +4,7 @@
 #   LINUX EXAMPLE: /usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia
 #  LINUX2 EXAMPLE: /home/swar/chia-blockchain/venv/bin/chia
 #  MAC OS EXAMPLE: /Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia
-chia_location: C:\Users\PP005\AppData\Local\chia-blockchain\app-1.1.6\resources\app.asar.unpacked\daemon\chia.exe
+chia_location: C:\Users\XXX\AppData\Local\chia-blockchain\app-1.1.6\resources\app.asar.unpacked\daemon\chia.exe
 
 
 manager:
@@ -174,13 +174,14 @@ jobs:
   #        cpu_affinity: List of cpu (or threads) to allocate for plot processes. The default example assumes you have
   #                      a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
-  - name: PP005-E
+  - name: XXX-1
     max_plots: 999
     farmer_public_key:
     pool_public_key:
     temporary_directory: E:\chia01
     temporary2_directory:
-    destination_directory: P:\final01
+    destination_directory: 
+      - P:\final01
     size: 32
     bitfield: true
     threads: 4
@@ -197,16 +198,15 @@ jobs:
     exclude_final_directory: false
     skip_full_destinations: true
     windows_process_priority: 32
-    enable_cpu_affinity: false
-    cpu_affinity: [ 0, 1, 2, 3, 4, 5 ]
 
-  - name: PP005-F
+  - name: XXX-2
     max_plots: 999
     farmer_public_key:
     pool_public_key:
     temporary_directory: F:\chia01
     temporary2_directory:
-    destination_directory: Q:\final01
+    destination_directory: 
+      - Q:\final01
     size: 32
     bitfield: true
     threads: 4
@@ -222,7 +222,4 @@ jobs:
     temporary2_destination_sync: false
     exclude_final_directory: false
     skip_full_destinations: true
-    unix_process_priority: 10
     windows_process_priority: 32
-    enable_cpu_affinity: false
-    cpu_affinity: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ]
